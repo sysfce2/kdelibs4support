@@ -29,6 +29,10 @@ find_dependency(Qt5DBus @REQUIRED_QT_VERSION@)
 find_dependency(Qt5Xml @REQUIRED_QT_VERSION@)
 find_dependency(Qt5PrintSupport @REQUIRED_QT_VERSION@)
 
+if(@HAVE_X11@ STREQUAL "TRUE")
+    find_dependency(X11)
+endif()
+
 if(WIN32)
     find_dependency(KDEWin)
 endif()
